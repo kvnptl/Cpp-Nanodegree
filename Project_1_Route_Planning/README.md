@@ -2,7 +2,7 @@
 
 This repo contains the starter code for the Route Planning project.
 
-<img src="map.png" width="600" height="450" />
+<img src="https://github.com/kvnptl/Cpp-Nanodegree/blob/main/Project_1_Route_Planning/result/path_planning.png"/>
 
 ## Cloning
 
