@@ -59,29 +59,39 @@ void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
 // - Remove that node from the open_list.
 // - Return the pointer.
 
-RouteModel::Node *RoutePlanner::NextNode() {
-    //check back my sorting algo from cpp_practice folder
-    vector<float> sum_vec;
+// RouteModel::Node *RoutePlanner::NextNode() {
+//     //check back my sorting algo from cpp_practice folder
+//     vector<float> sum_vec;
 
-    for (RouteModel::Node* check_node:this->open_list ){    
-        sum_vec.push_back(check_node->g_value + check_node->h_value);
-    }
+//     for (RouteModel::Node* check_node:this->open_list ){    
+//         sum_vec.push_back(check_node->g_value + check_node->h_value);
+//     }
 
-    //sort in descending order
-    vector<int> V (sum_vec.size());
-    std::iota(V.begin(), V.end(), 0);
-    //descending order
-    sort(V.begin(), V.end(), [&](int i, int j){ return sum_vec[i] > sum_vec[j]; });
+//     //sort in descending order
+//     vector<int> V (sum_vec.size());
+//     std::iota(V.begin(), V.end(), 0);
+//     //descending order
+//     sort(V.begin(), V.end(), [&](int i, int j){ return sum_vec[i] > sum_vec[j]; });
 
-    for (int i=0, j=0; i<sum_vec.size() && j<sum_vec.size(); i++, j++){
-         this->open_list[i] = this->open_list[V[j]];
-    }
+//     for (int i=0, j=0; i<sum_vec.size() && j<sum_vec.size(); i++, j++){
+//          this->open_list[i] = this->open_list[V[j]];
+//     }
 
-    RouteModel::Node* sorted_node;
-    sorted_node = this->open_list.back();
-    this->open_list.pop_back();
+//     RouteModel::Node* sorted_node;
+//     sorted_node = this->open_list.back();
+//     this->open_list.pop_back();
 
-    return sorted_node;
+//     return sorted_node;
+// }
+
+RouteModel::Node* RoutePlanner::NextNode() {
+    std::sort(open_list.begin(), open_list.end(), [](const auto &_1st, const auto &_2nd) {
+        return _1st->h_value + _1st->g_value < _2nd->h_value + _2nd->g_value;
+    });
+
+    RouteModel::Node *lowest_node = open_list.front();
+    open_list.erase(open_list.begin());
+    return lowest_node;
 }
 
 
