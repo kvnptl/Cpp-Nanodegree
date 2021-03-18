@@ -32,4 +32,5 @@
 *.app
 
 #build directory
-build/
+build/*
+build
