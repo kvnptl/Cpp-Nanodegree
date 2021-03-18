@@ -102,7 +102,7 @@ std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node 
     RouteModel::Node* temp_node = current_node;
     
     while (temp_node->parent != nullptr){
-        cout << "I am Construct Path" << "\n";
+        
         distance = distance + temp_node->distance(*temp_node->parent);
         path_found.push_back(*temp_node);
         temp_node = temp_node->parent;
@@ -134,13 +134,13 @@ void RoutePlanner::AStarSearch() {
     this->open_list.push_back(this->start_node);
 
     while (open_list.size() > 0){
-        cout << "I am Astart search!!!" << "\n";
+        
         current_node = NextNode();
-        cout << "I am after Next NOde" << "\n";
+        
 
         if(current_node->distance(*this->end_node) == 0){
             m_Model.path =  ConstructFinalPath(current_node);
-            cout << "I am Astart search -> end node!!!" << "\n";
+            
             return;
         }
         else{
