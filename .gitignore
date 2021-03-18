@@ -1,6 +1,3 @@
-src/
-src
-
 # Prerequisites
 *.d
 
@@ -35,6 +32,4 @@ src
 *.app
 
 #build directory
-build/*
-build
-src/
+build/
