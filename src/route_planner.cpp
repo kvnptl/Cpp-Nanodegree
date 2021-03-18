@@ -136,6 +136,7 @@ void RoutePlanner::AStarSearch() {
     this->open_list.push_back(this->start_node);
 
     while (open_list.size() > 0){
+        cout << "I am HERE!!!" << "\n";
         current_node = NextNode();
 
         if(current_node->distance(*this->end_node) == 0){
