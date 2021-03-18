@@ -35,6 +35,15 @@ float RoutePlanner::CalculateHValue(RouteModel::Node const *node) {
 // - For each node in current_node.neighbors, add the neighbor to open_list and set the node's visited attribute to true.
 
 void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
+    current_node->FindNeighbors();
+    
+    for (RouteModel::Node* nbr_node:current_node->neighbors){
+        this->open_list.push_back(nbr_node);
+        nbr_node->parent = current_node;
+        nbr_node->h_value = this->CalculateHValue(nbr_node);
+        nbr_node->g_value = current_node->g_value + current_node->distance(*nbr_node)
+        nbr_node->visited = true;
+    }
 
 }
 
@@ -47,7 +56,29 @@ void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
 // - Return the pointer.
 
 RouteModel::Node *RoutePlanner::NextNode() {
+    //check back my sorting algo from cpp_practice folder
+    vector<float> sum_vec;
+    int i = 0;
 
+    for (RouteModel::Node* check_node:this->open_list ){    
+        sum_vec[i] = check_node->g_value + check_node->h_value;
+        i++;
+    }
+
+    //sort in descending order
+    vector<int> V (sum_vec.size());
+    std::iota(V.begin(), V.end(), 0);
+    //descending order
+    sort(V.begin(), V.end(), [&](int i, int j){ return sum_vec[i] > sum_vec[j]; });
+
+     for (int i=0, j=0; i<sum_vec.size() && j<sum_vec.size(); i++, j++){
+         this->open_list[i] = this->open_list[V[j]]
+     }
+
+     RouteModel::Node* sorted_node;
+     sorted_node = this->open_list.pop_back()
+
+     return sorted_node;
 }
 
 
