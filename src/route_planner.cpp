@@ -77,7 +77,7 @@ RouteModel::Node *RoutePlanner::NextNode() {
     sort(V.begin(), V.end(), [&](int i, int j){ return sum_vec[i] > sum_vec[j]; });
 
      for (int i=0, j=0; i<sum_vec.size() && j<sum_vec.size(); i++, j++){
-         this->open_list[i] = this->open_list[V[j]]
+         this->open_list[i] = this->open_list[V[j]];
      }
 
      RouteModel::Node* sorted_node;
