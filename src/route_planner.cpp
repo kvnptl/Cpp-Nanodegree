@@ -67,27 +67,15 @@ RouteModel::Node *RoutePlanner::NextNode() {
         sum_vec.push_back(check_node->g_value + check_node->h_value);
     }
     
-    cout << "Vector sum_vec: ";
-    for (auto i:sum_vec){
-        cout << i << " ";
-    }
-    cout << "\n";
-
     //sort in descending order
     vector<int> V (sum_vec.size());
     std::iota(V.begin(), V.end(), 0);
     //descending order
     sort(V.begin(), V.end(), [&](int i, int j){ return sum_vec[i] > sum_vec[j]; });
-
-    cout << "Vector V: ";
-    for (auto i:V){
-        cout << i << " ";
-    }
-    cout << "\n";
     
-
+    std::vector<RouteModel::Node*> temp_list = this->open_list;
     for (int i=0, j=0; i<sum_vec.size() && j<sum_vec.size(); i++, j++){
-         this->open_list[i] = this->open_list[V[j]];
+         this->open_list[i] = temp_list[V[j]];
     }
 
     RouteModel::Node* sorted_node = this->open_list.back();
