@@ -84,17 +84,6 @@ RouteModel::Node *RoutePlanner::NextNode() {
     return sorted_node;
 }
 
-// RouteModel::Node* RoutePlanner::NextNode() {
-//     std::sort(open_list.begin(), open_list.end(), [](const auto &_1st, const auto &_2nd) {
-//         return _1st->h_value + _1st->g_value < _2nd->h_value + _2nd->g_value;
-//     });
-
-//     RouteModel::Node *lowest_node = open_list.front();
-//     open_list.erase(open_list.begin());
-//     return lowest_node;
-// }
-
-
 // TODO 6: Complete the ConstructFinalPath method to return the final path found from your A* search.
 // Tips:
 // - This method should take the current (final) node as an argument and iteratively follow the 
@@ -105,18 +94,15 @@ RouteModel::Node *RoutePlanner::NextNode() {
 
 std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node *current_node) {
     // Create path_found vector
-    // this->distance = 0.0f;
     std::vector<RouteModel::Node> path_found;
 
     // TODO: Implement your solution here.
     RouteModel::Node* temp_node = current_node;
-    // cout << "I am COnstruc:" << "\n";
     while (temp_node){
         
         path_found.push_back(*temp_node);
         if (temp_node->parent) {
             distance = distance + temp_node->distance(*temp_node->parent);
-            
             temp_node = temp_node->parent;
         }
         else {
@@ -124,10 +110,6 @@ std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node 
         }
     }
 
-    //reversing array
-    // for (int j=0; j<path_found.size(); j++){
-    //     path_found[j] = path_found[path_found.size() -1 -j];
-    // }
     std::reverse(path_found.begin(), path_found.end());
     
     this->distance *= m_Model.MetricScale(); // Multiply the distance by the scale of the map to get meters.
