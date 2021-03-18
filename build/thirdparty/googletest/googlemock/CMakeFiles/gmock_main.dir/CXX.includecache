@@ -514,13 +514,13 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/thirdparty/googletest/googlemock/src/gmock_main.cc
+/home/workspace/Cpp-Nanodegree/thirdparty/googletest/googlemock/src/gmock_main.cc
 iostream
 -
 gmock/gmock.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/thirdparty/googletest/googlemock/src/gmock/gmock.h
+/home/workspace/Cpp-Nanodegree/thirdparty/googletest/googlemock/src/gmock/gmock.h
 gtest/gtest.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/thirdparty/googletest/googlemock/src/gtest/gtest.h
+/home/workspace/Cpp-Nanodegree/thirdparty/googletest/googlemock/src/gtest/gtest.h
 tchar.h
 -
 

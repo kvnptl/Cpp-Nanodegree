@@ -1,4 +1,4 @@
-# Install script for directory: /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree
+# Install script for directory: /home/workspace/Cpp-Nanodegree
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/thirdparty/pugixml/cmake_install.cmake")
-  include("/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/thirdparty/googletest/cmake_install.cmake")
+  include("/home/workspace/Cpp-Nanodegree/build/thirdparty/pugixml/cmake_install.cmake")
+  include("/home/workspace/Cpp-Nanodegree/build/thirdparty/googletest/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/workspace/Cpp-Nanodegree/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++17   -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/thirdparty/googletest/googletest/include -I/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/thirdparty/googletest/googletest 
+CXX_INCLUDES = -I/home/workspace/Cpp-Nanodegree/thirdparty/googletest/googletest/include -I/home/workspace/Cpp-Nanodegree/thirdparty/googletest/googletest 
 

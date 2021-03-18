@@ -6,23 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../thirdparty/pugixml/src/pugiconfig.hpp
-
-../thirdparty/pugixml/src/pugixml.hpp
-pugiconfig.hpp
-../thirdparty/pugixml/src/pugiconfig.hpp
-stddef.h
--
-exception
--
-iterator
--
-iosfwd
--
-string
--
-
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/main.cpp
+/home/workspace/Cpp-Nanodegree/src/main.cpp
 optional
 -
 fstream
@@ -36,29 +20,13 @@ string
 io2d.h
 -
 route_model.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_model.h
+/home/workspace/Cpp-Nanodegree/src/route_model.h
 render.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/render.h
+/home/workspace/Cpp-Nanodegree/src/render.h
 route_planner.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_planner.h
+/home/workspace/Cpp-Nanodegree/src/route_planner.h
 
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/model.cpp
-model.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/model.h
-pugixml.hpp
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/pugixml.hpp
-iostream
--
-string_view
--
-cmath
--
-algorithm
--
-assert.h
--
-
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/model.h
+/home/workspace/Cpp-Nanodegree/src/model.h
 vector
 -
 unordered_map
@@ -68,27 +36,15 @@ string
 cstddef
 -
 
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/render.cpp
-render.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/render.h
-iostream
--
-
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/render.h
+/home/workspace/Cpp-Nanodegree/src/render.h
 unordered_map
 -
 io2d.h
 -
 route_model.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_model.h
+/home/workspace/Cpp-Nanodegree/src/route_model.h
 
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_model.cpp
-route_model.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_model.h
-iostream
--
-
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_model.h
+/home/workspace/Cpp-Nanodegree/src/route_model.h
 limits
 -
 cmath
@@ -96,17 +52,11 @@ cmath
 unordered_map
 -
 model.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/model.h
+/home/workspace/Cpp-Nanodegree/src/model.h
 iostream
 -
 
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_planner.cpp
-route_planner.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_planner.h
-algorithm
--
-
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_planner.h
+/home/workspace/Cpp-Nanodegree/src/route_planner.h
 iostream
 -
 vector
@@ -114,7 +64,7 @@ vector
 string
 -
 route_model.h
-/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/src/route_model.h
+/home/workspace/Cpp-Nanodegree/src/route_model.h
 
 /usr/include/GraphicsMagick/magick/analyze.h
 magick/image.h

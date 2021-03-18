@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree
+CMAKE_SOURCE_DIR = /home/workspace/Cpp-Nanodegree
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build
+CMAKE_BINARY_DIR = /home/workspace/Cpp-Nanodegree/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/thirdparty/googletest/CMakeFiles/progress.marks
-	cd /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	cd /home/workspace/Cpp-Nanodegree/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles /home/workspace/Cpp-Nanodegree/build/thirdparty/googletest/CMakeFiles/progress.marks
+	cd /home/workspace/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/clean
+	cd /home/workspace/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,17 +143,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/preinstall
+	cd /home/workspace/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/preinstall
+	cd /home/workspace/Cpp-Nanodegree/build && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/workspace/Cpp-Nanodegree/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -179,6 +179,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/workspace/Cpp-Nanodegree/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

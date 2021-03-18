@@ -59,21 +59,21 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree
+CMAKE_SOURCE_DIR = /home/workspace/Cpp-Nanodegree
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build
+CMAKE_BINARY_DIR = /home/workspace/Cpp-Nanodegree/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/test.dir/all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 CMakeFiles/test.dir/all: thirdparty/pugixml/CMakeFiles/pugixml.dir/all
+CMakeFiles/test.dir/all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles --progress-num=17,18,19,20,21 "Built target test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Cpp-Nanodegree/build/CMakeFiles --progress-num=17,18,19,20,21 "Built target test"
 .PHONY : CMakeFiles/test.dir/all
 
 # Include target in all.
@@ -83,9 +83,9 @@ all: CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule
 
 # Convenience name for target.
@@ -110,7 +110,7 @@ clean: CMakeFiles/test.dir/clean
 CMakeFiles/OSM_A_star_search.dir/all: thirdparty/pugixml/CMakeFiles/pugixml.dir/all
 	$(MAKE) -f CMakeFiles/OSM_A_star_search.dir/build.make CMakeFiles/OSM_A_star_search.dir/depend
 	$(MAKE) -f CMakeFiles/OSM_A_star_search.dir/build.make CMakeFiles/OSM_A_star_search.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target OSM_A_star_search"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Cpp-Nanodegree/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target OSM_A_star_search"
 .PHONY : CMakeFiles/OSM_A_star_search.dir/all
 
 # Include target in all.
@@ -120,9 +120,9 @@ all: CMakeFiles/OSM_A_star_search.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OSM_A_star_search.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OSM_A_star_search.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : CMakeFiles/OSM_A_star_search.dir/rule
 
 # Convenience name for target.
@@ -165,7 +165,7 @@ thirdparty/pugixml/preinstall:
 thirdparty/pugixml/CMakeFiles/pugixml.dir/all:
 	$(MAKE) -f thirdparty/pugixml/CMakeFiles/pugixml.dir/build.make thirdparty/pugixml/CMakeFiles/pugixml.dir/depend
 	$(MAKE) -f thirdparty/pugixml/CMakeFiles/pugixml.dir/build.make thirdparty/pugixml/CMakeFiles/pugixml.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles --progress-num=15,16 "Built target pugixml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Cpp-Nanodegree/build/CMakeFiles --progress-num=15,16 "Built target pugixml"
 .PHONY : thirdparty/pugixml/CMakeFiles/pugixml.dir/all
 
 # Include target in all.
@@ -175,9 +175,9 @@ all: thirdparty/pugixml/CMakeFiles/pugixml.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/pugixml/CMakeFiles/pugixml.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/pugixml/CMakeFiles/pugixml.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : thirdparty/pugixml/CMakeFiles/pugixml.dir/rule
 
 # Convenience name for target.
@@ -239,11 +239,11 @@ thirdparty/googletest/googlemock/preinstall: thirdparty/googletest/googlemock/gt
 # Target rules for target thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/all: thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/all
 thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/all: thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) -f thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles --progress-num=9,10 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Cpp-Nanodegree/build/CMakeFiles --progress-num=9,10 "Built target gmock_main"
 .PHONY : thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
@@ -253,9 +253,9 @@ all: thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -280,7 +280,7 @@ clean: thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles --progress-num=7,8 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Cpp-Nanodegree/build/CMakeFiles --progress-num=7,8 "Built target gmock"
 .PHONY : thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
@@ -290,9 +290,9 @@ all: thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : thirdparty/googletest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -337,7 +337,7 @@ thirdparty/googletest/googlemock/gtest/preinstall:
 thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles --progress-num=13,14 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Cpp-Nanodegree/build/CMakeFiles --progress-num=13,14 "Built target gtest_main"
 .PHONY : thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
@@ -347,9 +347,9 @@ all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -374,7 +374,7 @@ clean: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles --progress-num=11,12 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/workspace/Cpp-Nanodegree/build/CMakeFiles --progress-num=11,12 "Built target gtest"
 .PHONY : thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -384,9 +384,9 @@ all: thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/workspace/Cpp-Nanodegree/build/CMakeFiles 0
 .PHONY : thirdparty/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.

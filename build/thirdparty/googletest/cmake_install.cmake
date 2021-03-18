@@ -1,4 +1,4 @@
-# Install script for directory: /home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/thirdparty/googletest
+# Install script for directory: /home/workspace/Cpp-Nanodegree/thirdparty/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/build/thirdparty/googletest/googlemock/cmake_install.cmake")
+  include("/home/workspace/Cpp-Nanodegree/build/thirdparty/googletest/googlemock/cmake_install.cmake")
 
 endif()
 

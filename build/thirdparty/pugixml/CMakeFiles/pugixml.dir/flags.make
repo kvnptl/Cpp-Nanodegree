@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++17   -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/workspace/CppND-Route-Planning-Project/Cpp-Nanodegree/thirdparty/pugixml/src 
+CXX_INCLUDES = -I/home/workspace/Cpp-Nanodegree/thirdparty/pugixml/src 
 
