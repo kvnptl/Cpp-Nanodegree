@@ -62,11 +62,9 @@ void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
 RouteModel::Node *RoutePlanner::NextNode() {
     //check back my sorting algo from cpp_practice folder
     vector<float> sum_vec;
-    int i = 0;
 
     for (RouteModel::Node* check_node:this->open_list ){    
-        sum_vec[i] = check_node->g_value + check_node->h_value;
-        i++;
+        sum_vec.push_back(check_node->g_value + check_node->h_value);
     }
 
     //sort in descending order
@@ -75,15 +73,15 @@ RouteModel::Node *RoutePlanner::NextNode() {
     //descending order
     sort(V.begin(), V.end(), [&](int i, int j){ return sum_vec[i] > sum_vec[j]; });
 
-     for (int i=0, j=0; i<sum_vec.size() && j<sum_vec.size(); i++, j++){
+    for (int i=0, j=0; i<sum_vec.size() && j<sum_vec.size(); i++, j++){
          this->open_list[i] = this->open_list[V[j]];
-     }
+    }
 
-     RouteModel::Node* sorted_node;
-     sorted_node = this->open_list.back();
-     this->open_list.pop_back();
+    RouteModel::Node* sorted_node;
+    sorted_node = this->open_list.back();
+    this->open_list.pop_back();
 
-     return sorted_node;
+    return sorted_node;
 }
 
 
@@ -104,7 +102,7 @@ std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node 
     RouteModel::Node* temp_node = current_node;
     
     while (temp_node->parent != nullptr){
-        
+        cout << "I am Construct Path" << "\n";
         distance = distance + temp_node->distance(*temp_node->parent);
         path_found.push_back(*temp_node);
         temp_node = temp_node->parent;
@@ -136,15 +134,18 @@ void RoutePlanner::AStarSearch() {
     this->open_list.push_back(this->start_node);
 
     while (open_list.size() > 0){
-        cout << "I am HERE!!!" << "\n";
+        cout << "I am Astart search!!!" << "\n";
         current_node = NextNode();
+        cout << "I am after Next NOde" << "\n";
 
         if(current_node->distance(*this->end_node) == 0){
             m_Model.path =  ConstructFinalPath(current_node);
+            cout << "I am Astart search -> end node!!!" << "\n";
             return;
         }
         else{
             AddNeighbors(current_node);
+            
         }
     }
 }
