@@ -34,3 +34,4 @@
 #build directory
 build/*
 build
+src/
