@@ -61,9 +61,9 @@ int main(int argc, const char **argv)
     float start_y {0.0};
     float end_x {0.0};
     float end_y {0.0};
-    cout << "Enter start location(x y): ";
+    cout << "Enter start location(x y) [between 0 to 100]: ";
     cin >> start_x >> start_y;
-    cout << "Enter goal location(x Y): ";
+    cout << "Enter goal location(x Y) [between 0 to 100]: ";
     cin >> end_x >> end_y;
 
     // Build Model.
