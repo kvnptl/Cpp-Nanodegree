@@ -1,19 +1,69 @@
 #include <cassert>
 #include <stdexcept>
+#include <iostream>
 
 // TODO: Define class Pyramid
+class Pyramid
+{
 
-// public class members
+    // public class members
+public:
+    // constructor
+    Pyramid(int l, int w, int h) : length_(l), width_(w), height_(h)
+    {
+        Validate();
+    }
 
-// constructor
+    // accessors
+    int Length() const { return length_; }
+    int Width() const { return width_; }
+    int Height() const { return height_; }
+    int Volume() const { return (length_ * width_ * height_) / 3; }
 
-// accessors
+    // mutators
+    void Length(int l);
+    void Width(int w);
+    void Height(int h);
 
-// mutators
+    // public Volume() function
 
-// public Volume() function
+    // private class members
+private:
+    int length_;
+    int width_;
+    int height_;
+    void Validate()
+    {
+        if (length_ < 0 || width_ < 0 || height_ < 0)
+        {
+            throw std::invalid_argument("negative values");
+        }
+    }
+};
 
-// private class members
+void Pyramid::Length(int l)
+{
+    if (l > 0)
+    {
+        length_ = l;
+    }
+}
+
+void Pyramid::Width(int w)
+{
+    if (w > 0)
+    {
+        width_ = w;
+    }
+}
+
+void Pyramid::Height(int h)
+{
+    if (h > 0)
+    {
+        height_ = h;
+    }
+}
 
 // Test
 int main()
@@ -31,6 +81,8 @@ int main()
     }
     catch (...)
     {
+        std::cout << "Entered negative values"
+                  << "\n";
         caught = true;
     }
     assert(caught);
