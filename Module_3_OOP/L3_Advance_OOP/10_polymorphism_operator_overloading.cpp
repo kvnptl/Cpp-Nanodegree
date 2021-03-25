@@ -1,9 +1,25 @@
 #include <assert.h>
 
 // TODO: Define Point class
-// TODO: Define public constructor
-// TODO: Define + operator overload
-// TODO: Declare attributes x and y
+class Point
+{
+public:
+    // TODO: Define public constructor
+    Point(int a, int b) : x(a), y(b) {}
+    Point() {}
+
+    // TODO: Define + operator overload
+    Point operator+(const Point a)
+    {
+        Point c;
+        c.x = a.x + x;
+        c.y = a.y + y;
+        return c;
+    }
+    // TODO: Declare attributes x and y
+    int x;
+    int y;
+};
 
 // Test in main()
 int main()
