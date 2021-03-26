@@ -38,4 +38,4 @@ int System::RunningProcesses() { return LinuxParser::RunningProcesses(); }
 int System::TotalProcesses() { return LinuxParser::TotalProcesses(); }
 
 // TODO: Return the number of seconds since the system started running
-long int System::UpTime() { return 0; }
+long int System::UpTime() { return LinuxParser::UpTime(); }
