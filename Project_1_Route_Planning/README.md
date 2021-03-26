@@ -1,6 +1,6 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
+This repo contains the starter code for the Route Planning project. It uses A* algorithm to find a path between "Green" dot to "Red" dot.
 
 # Final Result
 
