@@ -17,7 +17,7 @@ ChatLogic::ChatLogic()
     ////
 
     // create instance of chatbot
-    std::cout << "ChatLogic constructor\n";
+    // std::cout << "ChatLogic constructor\n";
 
     // _chatBot = new ChatBot("../images/chatbot.png");
 
