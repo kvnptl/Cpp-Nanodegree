@@ -16,7 +16,8 @@ private:
     //// STUDENT CODE
     ////
 
-    ChatLogic *_chatLogic;
+    // ChatLogic *_chatLogic;
+    std::unique_ptr<ChatLogic> _chatLogic = std::make_unique<ChatLogic()>;
 
     ////
     //// EOF STUDENT CODE
