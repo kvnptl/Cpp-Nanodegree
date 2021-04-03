@@ -62,6 +62,9 @@
         "condition_variable": "cpp",
         "regex": "cpp",
         "shared_mutex": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "hash_map": "cpp",
+        "future": "cpp",
+        "mutex": "cpp"
     }
 }
