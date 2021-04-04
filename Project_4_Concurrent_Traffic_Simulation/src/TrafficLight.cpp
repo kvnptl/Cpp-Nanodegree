@@ -32,8 +32,8 @@ void MessageQueue<T>::send(T &&msg)
     std::lock_guard<std::mutex> uLock(_mutex);
 
     // add vector to queue
-    std::cout << "   Message " << Message << " will be added to the queue" << std::endl;
-    _msgs.push_back(std::move(Message));
+    std::cout << "   Message " << msg << " will be added to the queue" << std::endl;
+    _msgs.push_back(std::move(msg));
     _cond.notify_one(); // notify client after pushing new Vehicle into vector
 }
 
