@@ -24,7 +24,7 @@ template <class T>
 class MessageQueue
 {
 public:
-    MessageQueue();
+    // MessageQueue();
 
     //methods
     T receive();
@@ -51,6 +51,7 @@ public:
 
     // getters / setters
     TrafficLightPhase getCurrentPhase();
+    void setCurrentPhase(const TrafficLightPhase color);
 
     // typical behaviour methods
     void waitForGreen();

@@ -21,7 +21,7 @@ T MessageQueue<T>::receive()
     T message = std::move(_msgs.back());
     _msgs.pop_back();
 
-    return message; // will not be copied due to return value optimization (RVO) in C++
+    return message;
 }
 
 template <typename T>
@@ -42,6 +42,7 @@ void MessageQueue<T>::send(T &&msg)
 TrafficLight::TrafficLight()
 {
     _currentPhase = TrafficLightPhase::TRed;
+    msg_queue_ = std::make_shared<MessageQueue<TrafficLightPhase>>();
 }
 
 void TrafficLight::waitForGreen()
@@ -64,6 +65,11 @@ TrafficLightPhase TrafficLight::getCurrentPhase()
     return _currentPhase;
 }
 
+void TrafficLight::setCurrentPhase(const TrafficLightPhase color)
+{
+    _currentPhase = color;
+}
+
 void TrafficLight::simulate()
 {
     // FP.2b : Finally, the private method „cycleThroughPhases“ should be started in a thread when the public method „simulate“ is called. To do this, use the thread queue in the base class.
@@ -81,6 +87,10 @@ void TrafficLight::cycleThroughPhases()
     std::mt19937 eng(rd());
     std::uniform_int_distribution<> uDistr(4, 6);
 
+    std::unique_lock<std::mutex> lock(_mtx);
+    // std::cout << "Traffic Light #" << _id << "::cycleThroughtPhases: thread id = " << std::this_thread::get_id() << std::endl;
+    lock.unlock();
+
     double randomPhase = uDistr(eng);
     std::chrono::time_point<std::chrono::system_clock> lastUpdate;
     lastUpdate = std::chrono::system_clock::now();
@@ -89,6 +99,8 @@ void TrafficLight::cycleThroughPhases()
     {
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
         long timeSinceLastUpdate = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now() - lastUpdate).count();
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
 
         if (timeSinceLastUpdate >= randomPhase)
         {
