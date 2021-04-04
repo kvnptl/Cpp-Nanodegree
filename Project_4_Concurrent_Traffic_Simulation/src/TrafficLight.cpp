@@ -15,9 +15,8 @@ T MessageQueue<T>::receive()
     // to wait for and receive new messages and pull them from the queue using move semantics.
     // The received object should then be returned by the receive function.
     std::unique_lock<std::mutex> uLock(_mutex);
-    _cond.wait(uLock, [this] { return !_msgs.empty(); }); // pass unique lock to condition variable
+    _cond.wait(uLock, [this] { return !_msgs.empty(); });
 
-    // remove last vector element from queue
     T message = std::move(_msgs.back());
     _msgs.pop_back();
 
@@ -34,7 +33,7 @@ void MessageQueue<T>::send(T &&msg)
     // add vector to queue
     std::cout << "   Message " << msg << " will be added to the queue" << std::endl;
     _msgs.push_back(std::move(msg));
-    _cond.notify_one(); // notify client after pushing new Vehicle into vector
+    _cond.notify_one();
 }
 
 /* Implementation of class "TrafficLight" */
@@ -42,7 +41,7 @@ void MessageQueue<T>::send(T &&msg)
 TrafficLight::TrafficLight()
 {
     _currentPhase = TrafficLightPhase::TRed;
-    msg_queue_ = std::make_shared<MessageQueue<TrafficLightPhase>>();
+    _msg_queue = std::make_shared<MessageQueue<TrafficLightPhase>>();
 }
 
 void TrafficLight::waitForGreen()
@@ -53,7 +52,7 @@ void TrafficLight::waitForGreen()
     while (1)
     {
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
-        if (msg_queue_->receive() == TGreen)
+        if (_msg_queue->receive() == TGreen)
         {
             return;
         }
@@ -88,7 +87,6 @@ void TrafficLight::cycleThroughPhases()
     std::uniform_int_distribution<> uDistr(4, 6);
 
     std::unique_lock<std::mutex> lock(_mtx);
-    // std::cout << "Traffic Light #" << _id << "::cycleThroughtPhases: thread id = " << std::this_thread::get_id() << std::endl;
     lock.unlock();
 
     double randomPhase = uDistr(eng);
@@ -113,15 +111,12 @@ void TrafficLight::cycleThroughPhases()
                 _currentPhase = TRed;
             }
 
-            /* Send an update to the message queue and wait for it to be sent */
             auto msg = _currentPhase;
-            auto is_sent = std::async(std::launch::async, &MessageQueue<TrafficLightPhase>::send, msg_queue_, std::move(msg));
+            auto is_sent = std::async(std::launch::async, &MessageQueue<TrafficLightPhase>::send, _msg_queue, std::move(msg));
             is_sent.wait();
 
-            /* Reset stop watch for next cycle */
             lastUpdate = std::chrono::system_clock::now();
 
-            /* Randomly choose the cycle duration for the next cycle */
             randomPhase = uDistr(eng);
         }
     }
