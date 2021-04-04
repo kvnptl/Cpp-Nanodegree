@@ -31,9 +31,9 @@ public:
     void send(T &&msg);
 
 private:
-    std::mutex mutex_;
-    std::condition_variable cond_;
-    std::deque<T> queue_;
+    std::mutex _mutex_;
+    std::condition_variable _cond;
+    std::deque<T> _queue;
 };
 
 // FP.1 : Define a class „TrafficLight“ which is a child class of TrafficObject.
