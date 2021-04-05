@@ -34,3 +34,7 @@ This is a repo for the Capstone project in the [Udacity C++ Nanodegree Program](
 
 # Introduction
 
+This is a basic snake game. It starts with asking username and then game window will pop-up with a food and snake as a dot on GUI. The user can use keyboard arrow keys to move the snake around and catch the food. As snake reaches to the food, its length start increasing and score as well. After that, another food (square dot) will pop-up at some random location on fixed sized window. Now, if snake somehow hits its body, then the game is over. The player has to terminate/close the window and check score on terminal or list of all users score in the `user_scores.txt` (inside build/). 
+
+>Note: New score from the same user will overwrite the previous data.
+
