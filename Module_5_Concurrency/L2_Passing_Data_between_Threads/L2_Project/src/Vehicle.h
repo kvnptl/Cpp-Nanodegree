@@ -2,6 +2,7 @@
 #define VEHICLE_H
 
 #include "TrafficObject.h"
+#include "Intersection.h"
 
 // forward declarations to avoid include cycle
 class Street;
