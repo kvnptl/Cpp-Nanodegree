@@ -62,9 +62,9 @@ The code is organized in modules:
 
 ### Loops, Functions, I/O
 
-- The project demonstrates an understanding of C++ functions and control structures. I used a lot of control structures and loops throut the code. In the `user.cpp` for example, in the [`Player::saveScore()`](https://github.com/kvnptl/Cpp-Nanodegree/blob/a465c24f7665106d99c14995d80626e50d8b14aa/Project_5_Sname_Game/src/user.cpp#L36) method, I used if-statements to check if the `user_scores.txt` file exists, if not, then the program will create one. A while-loop to write the player data to the file.
+- The project demonstrates an understanding of C++ functions and control structures. I used a lot of control structures and loops throut the code. In the `user.cpp` for example, in the [`User::saveScore()`](https://github.com/kvnptl/Cpp-Nanodegree/blob/a465c24f7665106d99c14995d80626e50d8b14aa/Project_5_Sname_Game/src/user.cpp#L36) method, I used if-statements to check if the `user_scores.txt` file exists, if not, then the program will create one. A while-loop to write the player data to the file.
 
-- The project accepts user input and processes the input. The *GameMenu* class is defined to accept user input and process the input. In `gameMenu.cpp` [`GMenu::displayPlayerNamePrompt()`](https://github.com/kvnptl/Cpp-Nanodegree/blob/a465c24f7665106d99c14995d80626e50d8b14aa/Project_5_Sname_Game/src/gameMenu.cpp#L3), will let the user enter his player name to be used in the `user_scores.txt` file.
+- The project accepts user input and processes the input. The *GameMenu* class is defined to accept user input and process the input. In `gameMenu.cpp` [`GameMenu::displayPlayerNamePrompt()`](https://github.com/kvnptl/Cpp-Nanodegree/blob/a465c24f7665106d99c14995d80626e50d8b14aa/Project_5_Sname_Game/src/gameMenu.cpp#L3), will let the user enter his player name to be used in the `user_scores.txt` file.
 
 ### Object Oriented Programming
 
