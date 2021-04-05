@@ -38,3 +38,22 @@ This is a basic snake game. It starts with asking username and then game window 
 
 >Note: New score from the same user will overwrite the previous data.
 
+## Code structure
+
+The code is organized in modules:
+
+- controller
+- game
+- gameMenu
+- user
+- renderer
+- snake
+
+| Class name | Purpose  |
+|------------|----------|
+| Controller | Interact with users, let users use keyboard to control the snake in the game. |
+| Game       | Game class stores the state in the game, running in loops til end. |
+| GameMenu   | Game Menu class handles command line player I/O. |
+| User       | Basic information about the user and storing the the score. |
+| Render     | Render the game to the screen. |
+| Snake      | Contains attributes to keep track of the Snake speed, size, and location. |
