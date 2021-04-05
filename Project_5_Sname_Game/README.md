@@ -57,3 +57,19 @@ The code is organized in modules:
 | User       | Basic information about the user and storing the the score. |
 | Render     | Render the game to the screen. |
 | Snake      | Contains attributes to keep track of the Snake speed, size, and location. |
+
+## Rubric Points
+
+### Loops, Functions, I/O
+
+- The project demonstrates an understanding of C++ functions and control structures. I used a lot of control structures and loops throut the code. In the `user.cpp` for example, in the [`Player::saveScore()`](https://github.com/kvnptl/Cpp-Nanodegree/blob/a465c24f7665106d99c14995d80626e50d8b14aa/Project_5_Sname_Game/src/user.cpp#L36) method, I used if-statements to check if the `user_scores.txt` file exists, if not, then the program will create one. A while-loop to write the player data to the file.
+
+- The project accepts user input and processes the input. The *GameMenu* class is defined to accept user input and process the input. In `gameMenu.cpp` [`GMenu::displayPlayerNamePrompt()`](https://github.com/kvnptl/Cpp-Nanodegree/blob/a465c24f7665106d99c14995d80626e50d8b14aa/Project_5_Sname_Game/src/gameMenu.cpp#L3), will let the user enter his player name to be used in the `user_scores.txt` file.
+
+### Object Oriented Programming
+
+- The project uses Object Oriented Programming techniques. The [*GameMenu*](https://github.com/kvnptl/Cpp-Nanodegree/blob/main/Project_5_Sname_Game/src/gameMenu.cpp) class and [*User*](https://github.com/kvnptl/Cpp-Nanodegree/blob/main/Project_5_Sname_Game/src/user.cpp) class are defined to improve the structure of the program. Classes use appropriate access specifiers for class members and utilize member initialization lists.
+
+### Memory Management
+
+- Modify the `Game` contructor to use `GameMenu` reference in the [`Game::Game(std::size_t grid_width, std::size_t grid_height, GameMenu &gm)`](https://github.com/kvnptl/Cpp-Nanodegree/blob/a465c24f7665106d99c14995d80626e50d8b14aa/Project_5_Sname_Game/src/game.cpp#L5) line.
