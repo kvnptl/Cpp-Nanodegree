@@ -12,7 +12,6 @@ Vehicle::Vehicle()
     _speed = 400; // m/s
 }
 
-
 void Vehicle::setCurrentDestination(std::shared_ptr<Intersection> destination)
 {
     // update destination
@@ -31,10 +30,12 @@ void Vehicle::simulate()
 // virtual function which is executed in a thread
 void Vehicle::drive()
 {
-    // L3.3 : Ensure that the text output locks the console as a shared resource. Use the mutex _mtxCout you have added to the base class TrafficObject in the previous task. 
+    // L3.3 : Ensure that the text output locks the console as a shared resource. Use the mutex _mtxCout you have added to the base class TrafficObject in the previous task.
+    std::unique_lock<std::mutex> lck(mtx_);
 
     // print id of the current thread
     std::cout << "Vehicle #" << _id << "::drive: thread id = " << std::this_thread::get_id() << std::endl;
+    lck.unlock();
 
     // initalize variables
     bool hasEnteredIntersection = false;
@@ -106,9 +107,9 @@ void Vehicle::drive()
                     // this street is a dead-end, so drive back the same way
                     nextStreet = _currStreet;
                 }
-                
+
                 // pick the one intersection at which the vehicle is currently not
-                std::shared_ptr<Intersection> nextIntersection = nextStreet->getInIntersection()->getID() == _currDestination->getID() ? nextStreet->getOutIntersection() : nextStreet->getInIntersection(); 
+                std::shared_ptr<Intersection> nextIntersection = nextStreet->getInIntersection()->getID() == _currDestination->getID() ? nextStreet->getOutIntersection() : nextStreet->getInIntersection();
 
                 // send signal to intersection that vehicle has left the intersection
                 _currDestination->vehicleHasLeft(get_shared_this());
